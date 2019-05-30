@@ -2,6 +2,9 @@
   --a-color: rgb(181, 215, 233);
   --a-height: 90%;
   --a-height-hover: 10%;
+  --sm: 576px;
+  --md: 768px;
+  --lg: 992px;
 }
 
 body {
@@ -14,7 +17,7 @@ body {
 
 main {
   font-size: 1.2rem;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 a {
@@ -58,14 +61,20 @@ strong {
 }
 
 footer {
-	font-size: 1rem;
-	margin: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 0.5rem 1rem;
 }
 
-@media (min-width: 575px) {
+@media (min-width: 576px) {
   main {
     font-size: 1.5rem;
-    padding: 2rem 3rem;
-    max-width: 575px;
+    padding: 2rem 4rem;
+    max-width: var(--sm);
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    padding-left: 15rem;
   }
 }
