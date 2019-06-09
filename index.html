@@ -14,10 +14,17 @@
     </script>
 
     <meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="Description" content="Personal site of Luis Martinez Suarez, web professional.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Personal site of Luis Martinez Suarez, web professional." />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Nunito&display=swap" as="font" rel="stylesheet" type="font/woff2" crossorigin/>
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Nunito&display=swap"
+      as="font"
+      rel="stylesheet"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="./src/style.css" />
     <title>Luis Martinez - Web Professional</title>
   </head>
@@ -119,6 +126,13 @@
       </p>
     </main>
     <footer>Luis Mart&iacute;nez Su&aacute;rez@<span id="copyrightYear"></span></footer>
+    <script async>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').then(function() {
+          console.log('Service Worker Registered');
+        });
+      }
+    </script>
     <script>
       copyrightYear.textContent = new Date().getUTCFullYear();
     </script>
