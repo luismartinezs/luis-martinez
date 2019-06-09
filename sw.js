@@ -3,7 +3,7 @@
 self.addEventListener('install', function initServiceWorker(e) {
   e.waitUntil(
     caches.open('luis-martinez-site').then(function cacheResources(cache) {
-      return cache.addAll(['/index.html', '/src/style.css']);
+      return cache.addAll(['/', '/index.html', '/src/style.css']);
     })
   );
 });
