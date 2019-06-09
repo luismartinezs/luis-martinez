@@ -16,7 +16,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Description" content="Personal site of Luis Martinez Suarez, web professional." />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="icon" href="/favicon.ico"/>
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css?family=Nunito&display=swap"
@@ -128,8 +129,10 @@
     <footer>Luis Mart&iacute;nez Su&aacute;rez@<span id="copyrightYear"></span></footer>
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js').then(function() {
-          console.log('Service Worker Registered');
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js').then(function() {
+            console.log('Service Worker Registered');
+          });
         });
       }
     </script>

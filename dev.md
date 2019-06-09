@@ -1,0 +1,1 @@
+- Added service workers functionality

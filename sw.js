@@ -1,5 +1,3 @@
-// importScripts('/cache-polyfill.js');
-
 self.addEventListener('install', function initServiceWorker(e) {
   e.waitUntil(
     caches.open('luis-martinez-site').then(function cacheResources(cache) {
@@ -9,8 +7,6 @@ self.addEventListener('install', function initServiceWorker(e) {
 });
 
 self.addEventListener('fetch', function fetchResource(event) {
-  console.log(event.request.url);
-
   event.respondWith(
     caches.match(event.request).then(function getResponse(response) {
       return response || fetch(event.request);
